@@ -33,12 +33,6 @@ img{
   width:auto;
 }
 
-.icon{
-  width:20px !important;
-  height:20px !important;
-  display:inline-block;
-}
-
 main {
   width: 85vw;
   min-height: 80vh;
