@@ -36,11 +36,16 @@ class App extends React.Component {
 
   render(){
     return (
-      <div className="App">
-          <UserCard users={this.state.users}/>
-            {this.state.followers.map(user => (
-                <UserCard users={user}/>
-            ))}
+      <div className='App'>
+        <h1 className='title'>
+          Github Users
+        </h1>
+        <section className="user-list grid-view">
+            <UserCard users={this.state.users}/>
+              {this.state.followers.map(user => (
+                  <UserCard users={user}/>
+              ))}
+        </section>
       </div>
     );
   }
