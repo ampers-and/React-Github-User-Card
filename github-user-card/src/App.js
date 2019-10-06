@@ -31,6 +31,20 @@ class App extends React.Component {
         console.log(this.state.followers)
       })
       .catch(err => console.log(err));
+
+      //Extra?
+
+      this.state.followers.forEach( a => {
+
+        axios
+        .get(`${a.url}`)
+        .then(res => {
+          console.log(res.data);
+          this.setState({users: res.data});
+          console.log(this.state.users)
+        })
+        .catch(err => console.log(err));
+      })
   }
 
 
